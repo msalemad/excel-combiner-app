@@ -2,47 +2,52 @@ import os
 import pandas as pd
 import time
 import logging
+from tqdm import tqdm
+from colorama import Fore, Style, init
 from utils.logger import setup_logger
+
+init(autoreset=True)
 
 def combine_excel_files(input_folder, output_file):
     logger = setup_logger()
-    logger.info("Starting the Excel file combination process.")
+    logger.info(Fore.GREEN + "Iniciando el proceso de combinación de archivos Excel.")
     
-    # Verify input and output directories
+    # Verificar directorios de entrada y salida
     if not os.path.exists(input_folder):
-        logger.error(f"Input folder '{input_folder}' does not exist.")
+        logger.error(Fore.RED + f"La carpeta de entrada '{input_folder}' no existe.")
         return
     if not os.path.exists(os.path.dirname(output_file)):
         os.makedirs(os.path.dirname(output_file))
-        logger.info(f"Created output directory '{os.path.dirname(output_file)}'.")
+        logger.info(Fore.GREEN + f"Directorio de salida creado '{os.path.dirname(output_file)}'.")
 
-    # List all .xlsx files in the input directory
+    # Listar todos los archivos .xlsx en el directorio de entrada
     excel_files = [f for f in os.listdir(input_folder) if f.endswith('.xlsx')]
-    logger.info(f"Found {len(excel_files)} Excel files to combine.")
+    logger.info(Fore.GREEN + f"Se encontraron {len(excel_files)} archivos Excel para combinar.")
 
     combined_data = pd.DataFrame()
 
-    for file in excel_files:
+    # Barra de progreso
+    for file in tqdm(excel_files, desc="Combinando archivos", unit="archivo"):
         file_path = os.path.join(input_folder, file)
-        logger.info(f"Reading file: {file_path}")
+        logger.info(Fore.GREEN + f"Leyendo archivo: {file_path}")
         
-        # Read the Excel file
+        # Leer el archivo Excel
         data = pd.read_excel(file_path)
         
-        # Combine data while maintaining headers
+        # Combinar datos manteniendo los encabezados
         combined_data = pd.concat([combined_data, data.iloc[1:]], ignore_index=True)
-        logger.info(f"Combined data from {file_path}. Current total rows: {len(combined_data)}")
+        logger.info(Fore.GREEN + f"Datos combinados de {file_path}. Total de filas actuales: {len(combined_data)}")
 
-    # Save the combined data to a new Excel file
+    # Guardar los datos combinados en un nuevo archivo Excel
     combined_data.to_excel(output_file, index=False, header=True)
-    logger.info(f"Combined Excel file saved to: {output_file}")
+    logger.info(Fore.GREEN + f"Archivo Excel combinado guardado en: {output_file}")
 
-    # Summary of the operation
+    # Resumen de la operación
     total_lines = len(combined_data)
     file_size = os.path.getsize(output_file)
     end_time = time.time()
     elapsed_time = end_time - start_time
-    logger.info(f"Operation completed. Total lines: {total_lines}, File size: {file_size} bytes, Time taken: {elapsed_time:.2f} seconds.")
+    logger.info(Fore.GREEN + f"Operación completada. Total de líneas: {total_lines}, Tamaño del archivo: {file_size} bytes, Tiempo de operación: {elapsed_time:.2f} segundos.")
 
 if __name__ == "__main__":
     start_time = time.time()
@@ -52,5 +57,5 @@ if __name__ == "__main__":
     
     combine_excel_files(input_folder, output_file)
     
-    # Keep the prompt open
-    input("Press Enter to exit...")
+    # Mantener el prompt abierto
+    input("Presiona Enter para salir...")

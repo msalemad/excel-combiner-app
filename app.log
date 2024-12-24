@@ -16,3 +16,23 @@
 2024-12-24 11:42:57,788 - INFO - Combined data from input\SGA BT.xlsx. Current total rows: 312220
 2024-12-24 11:45:33,206 - INFO - Combined Excel file saved to: output/combined.xlsx
 2024-12-24 11:45:33,238 - INFO - Operation completed. Total lines: 312220, File size: 27255735 bytes, Time taken: 208.66 seconds.
+2024-12-24 11:55:59,253 - INFO - Starting the Excel file combination process.
+2024-12-24 11:55:59,255 - INFO - Found 3 Excel files to combine.
+2024-12-24 11:55:59,282 - INFO - Reading file: input\SGA ACTIVOS.xlsx
+2024-12-24 11:56:28,022 - INFO - Combined data from input\SGA ACTIVOS.xlsx. Current total rows: 127099
+2024-12-24 11:56:28,022 - INFO - Reading file: input\SGA BAJA.xlsx
+2024-12-24 11:56:49,299 - INFO - Combined data from input\SGA BAJA.xlsx. Current total rows: 248898
+2024-12-24 11:56:49,300 - INFO - Reading file: input\SGA BT.xlsx
+2024-12-24 11:57:00,282 - INFO - Combined data from input\SGA BT.xlsx. Current total rows: 312220
+2024-12-24 11:59:01,427 - INFO - Combined Excel file saved to: output/combined.xlsx
+2024-12-24 11:59:01,446 - INFO - Operation completed. Total lines: 312220, File size: 27255734 bytes, Time taken: 182.19 seconds.
+2024-12-24 12:06:03,307 - INFO - [32mIniciando el proceso de combinación de archivos Excel.
+2024-12-24 12:06:03,309 - INFO - [32mSe encontraron 3 archivos Excel para combinar.
+2024-12-24 12:06:03,380 - INFO - [32mLeyendo archivo: input\SGA ACTIVOS.xlsx
+2024-12-24 12:06:27,533 - INFO - [32mDatos combinados de input\SGA ACTIVOS.xlsx. Total de filas actuales: 127099
+2024-12-24 12:06:27,535 - INFO - [32mLeyendo archivo: input\SGA BAJA.xlsx
+2024-12-24 12:06:49,902 - INFO - [32mDatos combinados de input\SGA BAJA.xlsx. Total de filas actuales: 248898
+2024-12-24 12:06:49,902 - INFO - [32mLeyendo archivo: input\SGA BT.xlsx
+2024-12-24 12:07:00,833 - INFO - [32mDatos combinados de input\SGA BT.xlsx. Total de filas actuales: 312220
+2024-12-24 12:10:22,161 - INFO - [32mArchivo Excel combinado guardado en: output/combined.xlsx
+2024-12-24 12:10:22,208 - INFO - [32mOperación completada. Total de líneas: 312220, Tamaño del archivo: 27255735 bytes, Tiempo de operación: 258.90 segundos.
