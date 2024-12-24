@@ -1,9 +1,17 @@
-# Excel Combiner Application
+# Excel Combiner App
 
-## Overview
-The Excel Combiner Application is a Python-based tool designed to combine multiple Excel (.xlsx) files into a single Excel file. The application maintains the headers from the first row of each input file and starts the data from the second row. It is structured for easy enhancements and provides detailed logging of operations.
+![version](https://img.shields.io/badge/version-1.0.0-blue)
+![python](https://img.shields.io/badge/python-3.8%2B-green)
+![license](https://img.shields.io/badge/license-MIT-yellow)
 
-## Project Structure
+---
+
+## Resumen
+
+La Aplicación Combinadora de Excel es una herramienta basada en Python diseñada para combinar múltiples archivos Excel (.xlsx) en un solo archivo Excel. La aplicación mantiene los encabezados de la primera fila de cada archivo de entrada y empieza los datos desde la segunda fila. Está estructurada para facilitar mejoras y proporciona un registro detallado de las operaciones.
+
+## Estructura del Proyecto
+
 ```
 excel-combiner-app
 ├── input
@@ -14,50 +22,85 @@ excel-combiner-app
 │   ├── combiner.py
 │   └── utils
 │       └── logger.py
+│
+├── combiner.exe
 ├── requirements.txt
 └── README.md
 ```
 
-## Directories
-- **input/**: Place your Excel (.xlsx) files that need to be combined in this directory.
-- **output/**: The combined Excel (.xlsx) file will be saved in this directory after the operation is completed.
+## 📁 Directorios
 
-## Files
-- **src/combiner.py**: The main script that handles the logic for reading input Excel files, combining their data, and saving the output. It also manages logging and provides a summary of the operation upon completion.
-- **src/utils/logger.py**: Contains utility functions for logging operations in verbose mode, aiding in debugging and tracking the application's status.
-- **requirements.txt**: Lists the dependencies required for the project, such as `pandas` and `openpyxl`, necessary for handling Excel files.
+- **📂 input/**: Coloca tus archivos Excel (.xlsx) que necesitan ser combinados en este directorio.
+- **📂 output/**: El archivo Excel (.xlsx) combinado se guardará en este directorio después de que la operación se complete.
 
-## Installation
-1. Clone the repository or download the project files.
-2. Navigate to the project directory.
-3. Install the required dependencies using pip:
-   ```
+---
+
+## 📄 Archivos
+
+- **`src/combiner.py`**: El script principal que maneja la lógica para leer los archivos Excel de entrada, combinar sus datos y guardar el resultado. También gestiona el registro y proporciona un resumen de la operación al finalizar.
+- **`src/utils/logger.py`**: Contiene funciones utilitarias para el registro de operaciones en modo detallado, ayudando en la depuración y seguimiento del estado de la aplicación.
+- **`requirements.txt`**: Enumera las dependencias requeridas para el proyecto, como `pandas` y `openpyxl`, necesarias para manejar archivos Excel.
+
+---
+
+## 🛠️ Instalación
+
+1. Clona el repositorio o descarga los archivos del proyecto.
+2. Navega al directorio del proyecto.
+3. Instala las dependencias requeridas usando pip:
+   ```sh
    pip install -r requirements.txt
    ```
 
-## Usage
-1. Place the Excel files you want to combine in the `input/` directory.
-2. Run the application by executing the following command:
-   ```
+---
+
+## 🚀 Uso
+
+1. Coloca los archivos Excel que deseas combinar en el directorio `input/`.
+2. Ejecuta la aplicación ejecutando el siguiente comando:
+
+   ```sh
    python src/combiner.py
    ```
-3. After execution, check the `output/` directory for the combined Excel file.
 
-## Logging
-The application provides detailed verbose logging of operations, which can be useful for debugging and understanding the flow of the program.
+   O ejecuta el archivo ejecutable:
+   ```sh
+   ./combiner.exe
+   ```
+3. Después de la ejecución, revisa el directorio `output/` para el archivo Excel combinado.
 
-## Summary
-Upon completion of the operation, the application will provide a summary that includes:
-- Total lines combined
-- File size of the output file
-- Operation time
-- Program status
+---
 
-## Future Enhancements
-This project is structured to allow for future enhancements, such as:
-- Adding support for more file formats
-- Implementing a GUI for easier user interaction
-- Enhancing logging features for better tracking
+## 📝 Registro
 
-## License
-This project is open-source and available for modification and distribution under the terms of the MIT License.
+La aplicación proporciona un registro detallado y verboso de las operaciones, lo que puede ser útil para la depuración y comprensión del flujo del programa.
+
+---
+
+## 📊 Resumen
+
+Al completar la operación, la aplicación proporcionará un resumen que incluye:
+
+- Total de líneas combinadas
+- Tamaño del archivo de salida
+- Tiempo de operación
+- Estado del programa
+
+---
+
+## 🌟 Mejoras Futuras
+
+Este proyecto está estructurado para permitir futuras mejoras, tales como:
+
+- Agregar soporte para más formatos de archivo
+- Implementar una interfaz gráfica para una interacción más sencilla del usuario
+- Mejorar las características de registro para un mejor seguimiento
+- Optimizar el rendimiento para manejar archivos más grandes
+- Añadir soporte para la combinación de hojas específicas dentro de los archivos Excel
+- Implementar pruebas automatizadas para asegurar la calidad del código
+
+---
+
+## 📜 Licencia
+
+Este proyecto es de código abierto y está disponible para modificación y distribución bajo los términos de la Licencia MIT.
