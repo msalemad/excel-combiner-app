@@ -36,3 +36,13 @@
 2024-12-24 12:07:00,833 - INFO - [32mDatos combinados de input\SGA BT.xlsx. Total de filas actuales: 312220
 2024-12-24 12:10:22,161 - INFO - [32mArchivo Excel combinado guardado en: output/combined.xlsx
 2024-12-24 12:10:22,208 - INFO - [32mOperación completada. Total de líneas: 312220, Tamaño del archivo: 27255735 bytes, Tiempo de operación: 258.90 segundos.
+2024-12-24 12:22:00,090 - INFO - [32mIniciando el proceso de combinación de archivos Excel.
+2024-12-24 12:22:00,101 - INFO - [32mSe encontraron 3 archivos Excel para combinar.
+2024-12-24 12:22:00,111 - INFO - [32mLeyendo archivo: input\SGA ACTIVOS.xlsx
+2024-12-24 12:22:25,200 - INFO - [32mDatos combinados de input\SGA ACTIVOS.xlsx. Total de filas actuales: 127099
+2024-12-24 12:22:25,203 - INFO - [32mLeyendo archivo: input\SGA BAJA.xlsx
+2024-12-24 12:22:47,471 - INFO - [32mDatos combinados de input\SGA BAJA.xlsx. Total de filas actuales: 248898
+2024-12-24 12:22:47,472 - INFO - [32mLeyendo archivo: input\SGA BT.xlsx
+2024-12-24 12:22:59,458 - INFO - [32mDatos combinados de input\SGA BT.xlsx. Total de filas actuales: 312220
+2024-12-24 12:28:02,443 - INFO - [32mArchivo Excel combinado guardado en: output/combined.xlsx
+2024-12-24 12:28:02,475 - INFO - [32mOperación completada. Total de líneas: 312220, Tamaño del archivo: 27255735 bytes, Tiempo de operación: 362.39 segundos.
