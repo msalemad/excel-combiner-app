@@ -1,5 +1,4 @@
 import logging
-import os
 
 def setup_logger(log_file='app.log'):
     """Sets up the logger for the application."""
@@ -11,6 +10,7 @@ def setup_logger(log_file='app.log'):
             logging.StreamHandler()
         ]
     )
+    return logging.getLogger('excel_combiner')
 
 def log_info(message):
     """Logs an informational message."""
